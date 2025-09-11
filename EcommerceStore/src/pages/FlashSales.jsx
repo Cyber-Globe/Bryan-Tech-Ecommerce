@@ -2,27 +2,60 @@ import flashSales from "../components/assets/data";
 import "./CSS/FlashSales.css";
 import LeftArrow from "../components/assets/LeftArrow.png";
 import RightArrow from "../components/assets/RightArrow.png";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function FlashSales() {
+  const targetDateRef = useRef(new Date().getTime() + 3 * 24 * 60 * 60 * 1000);
+
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDateRef.current - now;
+
+      if (distance <= 0) {
+        clearInterval(interval);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      } else {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="flash-sales">
       <div className="flash-countdown">
         <h3 className="flash-title">Flash Sales</h3>
         <div class="time-box">
           <span class="label">DAYS</span>
-          <span class="value">12</span>
+          <span class="value">{timeLeft.days}</span>
         </div>
         <div class="time-box">
           <span class="label">Hrs</span>
-          <span class="value">23</span>
+          <span class="value">{timeLeft.hours}</span>
         </div>
         <div class="time-box">
           <span class="label">Min</span>
-          <span class="value">19</span>
+          <span class="value">{timeLeft.minutes}</span>
         </div>
         <div class="time-box">
           <span class="label">Sec</span>
-          <span class="value">56</span>
+          <span class="value">{timeLeft.seconds}</span>
         </div>
         <div className="flash-arrow">
           <span>
