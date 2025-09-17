@@ -69,7 +69,6 @@ export default function FlashSales() {
       <div className="flash-grid">
         {flashSales.map((item) => (
           <div key={item.id} className="flash-card">
-            {/* Discount Banner */}
             <div className="flash-banner">
               <span className="discount">${item.discount}</span>
             </div>

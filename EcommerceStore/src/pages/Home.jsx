@@ -1,10 +1,18 @@
 import React from "react";
+import SellingProduct from "./SellingProducts";
 import { Link } from "react-router-dom";
 import iphone16 from "../components/assets/iphone16.png";
 import iphone16Image from "../components/assets/iphoneimage.png";
-import "./CSS/Home.css";
 import FlashSales from "./FlashSales";
-
+import LeftArrow from "../components/assets/LeftArrow.png";
+import RightArrow from "../components/assets/RightArrow.png";
+import CellPhone from "../components/assets/Category-CellPhone.png";
+import Computer from "../components/assets/Category-Computer.png";
+import SmartWatch from "../components/assets/Category-SmartWatch.png";
+import Camera from "../components/assets/Category-Camera.png";
+import HeadPhones from "../components/assets/Category-Headphone.png";
+import Gaming from "../components/assets/Category-Gamepad.png";
+import "./CSS/Home.css";
 export default function Home() {
   return (
     <>
@@ -65,6 +73,46 @@ export default function Home() {
         </div>
       </div>
       <FlashSales />
+      <div className="cat-section">
+        <div className="category-header">
+          <h3>Browse By Category</h3>
+          <div className="arrow">
+            <span>
+              <img src={LeftArrow} alt="left-arrow-sign" />
+            </span>
+            <span>
+              <img src={RightArrow} alt="right-arrow-sign" />
+            </span>
+          </div>
+        </div>
+        <div className="category-items">
+          <div className="category-image">
+            <img src={CellPhone} alt="" />
+            <p>Phones</p>
+          </div>
+          <div className="category-image">
+            <img src={Computer} alt="" />
+            <p>Computers</p>
+          </div>
+          <div className="category-image">
+            <img src={SmartWatch} alt="" />
+            <p>SmartWatch</p>
+          </div>
+          <div className="category-image camera">
+            <img src={Camera} alt="" />
+            <p>Camera</p>
+          </div>
+          <div className="category-image">
+            <img src={HeadPhones} alt="" />
+            <p>HeadPhones</p>
+          </div>
+          <div className="category-image">
+            <img src={Gaming} alt="" />
+            <p>Gaming</p>
+          </div>
+        </div>
+      </div>
+      <SellingProduct />
     </>
   );
 }
