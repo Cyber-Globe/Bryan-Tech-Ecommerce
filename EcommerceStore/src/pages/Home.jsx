@@ -12,6 +12,7 @@ import SmartWatch from "../components/assets/Category-SmartWatch.png";
 import Camera from "../components/assets/Category-Camera.png";
 import HeadPhones from "../components/assets/Category-Headphone.png";
 import Gaming from "../components/assets/Category-Gamepad.png";
+import JBL_BOX from "../components/assets/JBL_BOOMBOX_2_HERO_020_x1.png";
 import "./CSS/Home.css";
 export default function Home() {
   return (
@@ -113,6 +114,39 @@ export default function Home() {
         </div>
       </div>
       <SellingProduct />
+      <div className="JBL_HERO">
+        <div className="JBL_BOX_ONE">
+          <p className="first-child">Categories</p>
+          <h3>
+            Enhance Your
+            <br /> Music Experience
+          </h3>
+          <section className="count-down">
+            <div className="counts">
+              <p>23</p>
+              <p>Hours</p>
+            </div>
+            <div className="counts">
+              <p>05</p>
+              <p>Days</p>
+            </div>
+            <div className="counts">
+              <p>59</p>
+              <p>Minutes</p>
+            </div>
+            <div className="counts">
+              <p>35</p>
+              <p>Seconds</p>
+            </div>
+          </section>
+          <button className="count-down-btn">Buy Now!</button>
+        </div>
+        <div className="JBL_BOX_TWO">
+          <div>
+            <img src={JBL_BOX} alt="JBL BOX" />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

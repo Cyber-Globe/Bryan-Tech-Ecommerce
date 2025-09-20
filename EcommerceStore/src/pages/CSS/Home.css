@@ -8,7 +8,7 @@
 
 .home-side-menu {
   flex: 0 0 20%;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #fafafa;
   padding: 20px;
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -24,7 +24,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #000;
-  color: #fff;
+  color: #fafafa;
   border-radius: 8px;
 }
 
@@ -37,7 +37,7 @@
 .home-main-top p {
   font-size: 16px;
   margin-top: 8px;
-  color: #bbb;
+  color: #fafafa;
 }
 
 .span-image {
@@ -66,13 +66,13 @@
   transition: color 0.3s ease;
 }
 
-//////////////////CATEGORY SECTION//////
+/* CATEGORY SECTION */
 .cat-section {
   padding: 60px 0;
-  margin-top: 80px;
-  margin-bottom: 4580px;
+  margin-top: 30px;
+  margin-bottom: 10px;
   box-sizing: border-box;
-  background: lightblue; /* temporary: helps you see the actual container */
+  background: #fafafa;
 }
 
 .category-header {
@@ -101,7 +101,7 @@
 .category-items > * {
   width: 170px;
   height: 145px;
-  background: #ecebeb;
+  background: #fafafa;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,7 +109,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   cursor: pointer;
-  border: 1px solid #ddd;
+  border: 1px solid #fafafa;
   transition: all 0.3s ease;
 }
 
@@ -124,11 +124,78 @@
 
 .category-image:hover {
   background: #db4444;
-  color: #fff;
+  color: #fafafa;
 }
 
 .camera {
   background: #db4444;
-  color: #fff;
+  color: #fafafa;
   font-weight: 600;
+}
+
+.JBL_HERO {
+  max-width: 87%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: #000;
+  color: #bbb;
+  padding: 50px;
+}
+
+.first-child {
+  color: #00ff66;
+}
+
+.JBL_BOX_ONE h3 {
+  font-size: 52px;
+  color: #fafafa;
+  line-height: 1.3;
+}
+.count-down {
+  display: flex;
+
+  gap: 20px; /* space between circles */
+  margin-top: 40px;
+}
+
+.counts {
+  width: 90px; /* circle width */
+  height: 90px; /* circle height */
+  border-radius: 50%; /* makes it a circle */
+  background: #fafafa; /* dark background */
+  color: #000000; /* text color */
+  display: flex;
+  flex-direction: column; /* stack number & label */
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.counts p:first-child {
+  font-size: 1.8rem; /* bigger for numbers */
+  margin: 0;
+}
+
+.counts p:last-child {
+  font-size: 0.9rem; /* smaller for labels */
+  margin: 0;
+}
+
+.count-down-btn {
+  margin: 30px 5px;
+  padding: 20px 50px;
+  background-color: #00ff66;
+  color: #fafafa;
+  border: none;
+  font-size: 18px;
+}
+
+.count-down-btn:hover {
+  background-color: #00ff669f;
+  color: #e6e6e6;
 }

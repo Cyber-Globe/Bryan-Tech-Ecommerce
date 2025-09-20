@@ -1,8 +1,8 @@
-import p1_img from "./Frame 613.png";
-import p2_img from "./Frame 612.png";
-import p3_img from "./Frame 611.png";
-import p4_img from "./Frame 604.png";
-import p5_img from "./Frame 614.png";
+import p1_img from "./Frame611.png";
+import p2_img from "./Frame612.png";
+import p3_img from "./Frame613.png";
+import p4_img from "./Frame614.png";
+import p5_img from "./Gucci-coat1.png";
 
 let data_product = [
   {
