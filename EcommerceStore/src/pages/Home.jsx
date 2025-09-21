@@ -13,7 +13,9 @@ import Camera from "../components/assets/Category-Camera.png";
 import HeadPhones from "../components/assets/Category-Headphone.png";
 import Gaming from "../components/assets/Category-Gamepad.png";
 import JBL_BOX from "../components/assets/JBL_BOOMBOX_2_HERO_020_x1.png";
+import AppProducts from "./AllProducts";
 import "./CSS/Home.css";
+import NewArrivals from "./NewArrivals";
 export default function Home() {
   return (
     <>
@@ -147,6 +149,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <AppProducts />
+      <NewArrivals />
     </>
   );
 }
