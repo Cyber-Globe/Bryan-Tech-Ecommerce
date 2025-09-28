@@ -9,7 +9,6 @@ export default function NewArrivals() {
     <div className="arrivals">
       <h4>New Arrival</h4>
       <div className="arrivals-flex">
-        {/* Left column */}
         <div className="left-column">
           <img src={ps5} alt="PlayStation 5" />
           <div className="card-text">
@@ -21,9 +20,7 @@ export default function NewArrivals() {
           </div>
         </div>
 
-        {/* Right column */}
         <div className="right-column">
-          {/* Top row */}
           <div className="right-top">
             <img src={attractive} alt="Women's Collection" />
             <div className="card-text">
@@ -35,7 +32,6 @@ export default function NewArrivals() {
             </div>
           </div>
 
-          {/* Bottom row with 2 cards */}
           <div className="right-bottom">
             <div className="card">
               <img src={speakers} alt="Men’s Collection" />

@@ -13,9 +13,14 @@ import Camera from "../components/assets/Category-Camera.png";
 import HeadPhones from "../components/assets/Category-Headphone.png";
 import Gaming from "../components/assets/Category-Gamepad.png";
 import JBL_BOX from "../components/assets/JBL_BOOMBOX_2_HERO_020_x1.png";
+import services1 from "../components/assets/Services1.png";
+import services2 from "../components/assets/Services2.png";
+import services3 from "../components/assets/Services3.png";
+
 import AppProducts from "./AllProducts";
 import "./CSS/Home.css";
 import NewArrivals from "./NewArrivals";
+import Footer from "./Footer";
 export default function Home() {
   return (
     <>
@@ -151,6 +156,31 @@ export default function Home() {
       </div>
       <AppProducts />
       <NewArrivals />
+
+      <section className="services-icon">
+        <div>
+          <img src={services1} alt="services-image-icon" />
+          <div className="services-text">
+            <h5>FREE AND FAST DELIVERY</h5>
+            <p>Free delivery for all orders over $140</p>
+          </div>
+        </div>
+        <div>
+          <img src={services2} alt="services-image-icon" />
+          <div className="services-text">
+            <h5>24/7 CUSTOMER SERVICE</h5>
+            <p>Friendly 24/7 customer support</p>
+          </div>
+        </div>
+        <div>
+          <img src={services3} alt="services-image-icon" />
+          <div className="services-text">
+            <h5>MONEY BACK GUARANTEE</h5>
+            <p>We reurn money within 30 days</p>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 }
