@@ -9,7 +9,7 @@ function NavBar() {
   const [menu, setMenu] = React.useState("shop");
 
   return (
-    <>
+    <header>
       <div className="discription">
         <div></div>
         <div>
@@ -70,7 +70,7 @@ function NavBar() {
           </div>
         </div>
       </div>
-    </>
+    </header>
   );
 }
 

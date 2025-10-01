@@ -1,0 +1,156 @@
+.about {
+  width: 95%;
+  margin: 50px auto;
+  background-color: rgb(254, 255, 255);
+}
+
+/* Navigation links */
+.about-nav {
+  margin: 30px auto;
+}
+.about-nav a {
+  text-decoration: none;
+  color: inherit;
+  margin-right: 5px;
+  font-style: italic;
+}
+.about-nav a:first-child {
+  color: gray;
+}
+
+/* Hero Section */
+.abour-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+.about-hero-first {
+  width: 50%;
+  padding: 30px 0;
+  color: rgb(31, 31, 31);
+  line-height: 1.5;
+}
+.about-hero-first h2 {
+  font-size: 32px;
+  font-weight: 800;
+}
+.about-hero-first p {
+  font-size: 15px;
+}
+
+/* Services Section */
+.about-services {
+  margin: 70px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: center;
+  gap: 20px;
+}
+.about-card {
+  flex: 1;
+  max-width: 32%; /* 3 cards per row on desktop */
+  border: 1px solid rgb(150, 150, 150);
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.about-card h4,
+.about-card p {
+  margin: 5px;
+  padding: 2px;
+}
+.about-card h4 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.child-2 {
+  background-color: #db4444;
+  color: white;
+}
+
+/* Staff Section */
+.staff {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  margin: 40px 0;
+  gap: 30px;
+}
+
+/* Social links */
+.social-Acct {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Full Services Section */
+.full-services {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  gap: 20px;
+}
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .abour-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-hero-first {
+    width: 100%;
+  }
+
+  .about-services {
+    flex-wrap: wrap;
+  }
+  .about-card {
+    max-width: 45%; /* 2 per row on tablets */
+    margin: 10px auto;
+  }
+
+  .staff {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .full-services {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+  .about {
+    margin: 20px auto;
+    padding: 10px;
+  }
+  .about-hero-first h2 {
+    font-size: 24px;
+  }
+  .about-hero-first p {
+    font-size: 14px;
+  }
+
+  .about-card {
+    max-width: 100%; /* 1 card per row on phones */
+    padding: 20px;
+  }
+
+  .staff {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-Acct {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

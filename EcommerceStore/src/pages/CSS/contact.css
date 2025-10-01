@@ -1,0 +1,162 @@
+.main-contact {
+  width: 95%;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Contact section container */
+.contact-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 50px auto;
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+/* Contact info (left column) */
+.contact-details {
+  flex: 1 1 300px; /* flexible but min 300px */
+  max-width: 400px;
+  padding: 20px;
+  background-color: rgb(241, 241, 241);
+  font-size: 14px;
+}
+
+/* Form details (right column) */
+.form-details {
+  flex: 1 1 500px;
+  min-width: 300px;
+}
+
+/* Inputs */
+input {
+  display: block;
+  flex: 1 1 200px; /* flexible input sizes */
+  min-width: 200px;
+  padding: 15px;
+  border: none;
+  background-color: rgb(241, 241, 241);
+}
+
+input::placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+textarea::placeholder {
+  color: gray;
+  font-size: 16px;
+  padding: 10px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(196, 196, 196);
+  border: 1px solid rgb(212, 212, 212);
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.message textarea {
+  width: 100%;
+  min-height: 250px;
+  border: none;
+  background-color: rgb(241, 241, 241);
+  padding: 20px;
+  resize: vertical; /* allow resizing */
+}
+
+/* Button */
+button {
+  padding: 15px 45px;
+  border: none;
+  background-color: #db4444;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.form-details form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-details button {
+  align-self: flex-end;
+  margin-top: 15px;
+}
+
+/* Contact info styling */
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone h4 {
+  font-size: 20px;
+}
+.phone-contact {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #aaaaaa;
+  padding-bottom: 40px;
+}
+
+/* ============ RESPONSIVENESS ============ */
+@media (max-width: 992px) {
+  .contact-form {
+    flex-direction: column; /* stack vertically */
+    align-items: stretch;
+  }
+
+  .contact-details,
+  .form-details {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .message textarea {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-contact {
+    padding: 10px;
+  }
+
+  .contact-details {
+    font-size: 13px;
+    padding: 15px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  button {
+    width: 100%; /* full-width button for mobile */
+    align-self: center;
+  }
+}
